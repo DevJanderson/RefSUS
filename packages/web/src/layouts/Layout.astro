@@ -1,4 +1,6 @@
 ---
+import Header from "../components/Header.astro";
+
 interface Props {
   title: string;
   description?: string;
@@ -20,6 +22,7 @@ const {
     <title>{title} | RefSUS</title>
   </head>
   <body class="min-h-screen bg-background font-sans antialiased">
+    <Header />
     <slot />
   </body>
 </html>

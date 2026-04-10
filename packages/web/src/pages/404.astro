@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Pagina nao encontrada">
+  <main class="container mx-auto px-4 py-16">
+    <div class="flex flex-col items-center text-center space-y-6">
+      <img
+        src="https://cdni.iconscout.com/illustration/premium/thumb/not-found-illustration-svg-download-png-3861659.png"
+        alt="Not Found"
+        class="w-80 max-w-full"
+      />
+
+      <h1 class="text-4xl font-bold tracking-tight">
+        404 - Pagina nao encontrada
+      </h1>
+
+      <p class="text-lg text-muted-foreground">
+        Desculpe, a pagina que voce procura nao existe.
+      </p>
+
+      <a
+        href="/"
+        class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+      >
+        Voltar ao inicio
+      </a>
+    </div>
+  </main>
+</Layout>
