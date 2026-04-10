@@ -1,71 +1,20 @@
 import { serve } from '@hono/node-server'
-import { OpenAPIHono } from '@hono/zod-openapi'
-import { Scalar } from '@scalar/hono-api-reference'
 import { compress } from 'hono/compress'
-import { cors } from 'hono/cors'
-import { logger } from 'hono/logger'
-import { secureHeaders } from 'hono/secure-headers'
+import { createApp } from './app'
+import { setDb } from './db'
+import { getLocalDb } from './db/local'
 import { env } from './env'
-import { cacheHeaders } from './middleware/cache-headers'
-import { errorHandler } from './middleware/error-handler'
-import { notFound } from './middleware/not-found'
 import { apiRateLimit } from './middleware/rate-limit'
-import { requestId } from './middleware/request-id'
-import doencas from './routes/doencas'
-import fluxo from './routes/fluxo'
-import health from './routes/health'
-import notificacao from './routes/notificacao'
-import regioes from './routes/regioes'
-import sintomas from './routes/sintomas'
-import stats from './routes/stats'
 import { seed } from './seed'
 
-const app = new OpenAPIHono()
+// Initialize local SQLite before seed runs
+setDb(getLocalDb(env.DATABASE_URL))
 
-// Global middleware
-app.use(requestId)
-app.use(logger())
+const app = createApp()
+
+// Node.js-only middleware (not available in Workers)
 app.use(compress())
-app.use(
-  cors({
-    origin: '*',
-    allowMethods: ['GET', 'OPTIONS'],
-    allowHeaders: ['Content-Type'],
-    maxAge: 86400,
-  }),
-)
-app.use(secureHeaders())
 app.use(apiRateLimit)
-
-// Error handling
-app.onError(errorHandler)
-app.notFound(notFound)
-
-// Public routes
-app.route('/health', health)
-
-// Data routes (cached 1h)
-app.use('/v1/*', cacheHeaders)
-app.route('/v1/doencas', doencas)
-app.route('/v1/sintomas', sintomas)
-app.route('/v1/regioes', regioes)
-app.route('/v1/notificacao-compulsoria', notificacao)
-app.route('/v1/fluxo-notificacao', fluxo)
-app.route('/v1/stats', stats)
-
-// OpenAPI spec
-app.doc('/openapi.json', {
-  openapi: '3.1.0',
-  info: {
-    title: 'RefSUS API',
-    version: '1.0.0',
-    description:
-      'API pública de dados de referência do SUS — CID-10, sintomas, regiões IBGE, notificação compulsória e fluxos oficiais.',
-  },
-  servers: [{ url: `http://localhost:${env.PORT}` }],
-})
-
-app.get('/docs', Scalar({ url: '/openapi.json', theme: 'kepler' }))
 
 // Seed + start
 seed().then(() => {

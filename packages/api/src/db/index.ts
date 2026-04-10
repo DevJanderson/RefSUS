@@ -1,17 +1,30 @@
-import { mkdirSync } from 'node:fs'
-import { dirname } from 'node:path'
-import Database from 'better-sqlite3'
-import { drizzle } from 'drizzle-orm/better-sqlite3'
-import { migrate } from 'drizzle-orm/better-sqlite3/migrator'
-import { env } from '../env'
+import { drizzle as drizzleD1 } from 'drizzle-orm/d1'
+import type { BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
 import * as schema from './schema'
 
-mkdirSync(dirname(env.DATABASE_URL), { recursive: true })
+type D1Db = ReturnType<typeof drizzleD1<typeof schema>>
+type SqliteDb = BetterSQLite3Database<typeof schema>
+export type AppDb = SqliteDb | D1Db
 
-const sqlite = new Database(env.DATABASE_URL)
-sqlite.pragma('journal_mode = WAL')
-sqlite.pragma('foreign_keys = ON')
+// ── Per-request DB reference (set by middleware or startup) ──────────────────
+let _db: AppDb | null = null
 
-export const db = drizzle(sqlite, { schema })
+export function setDb(instance: AppDb) {
+  _db = instance
+}
 
-migrate(db, { migrationsFolder: 'drizzle' })
+/** Create a Drizzle instance from a Cloudflare D1 binding */
+export function createD1Db(d1: D1Database) {
+  return drizzleD1(d1, { schema })
+}
+
+/**
+ * Proxy that delegates to the current DB instance.
+ * Routes keep `import { db } from '../db'` — no changes needed.
+ */
+export const db: AppDb = new Proxy({} as AppDb, {
+  get(_target, prop) {
+    if (!_db) throw new Error('DB not initialized — ensure db middleware is registered')
+    return (_db as any)[prop]
+  },
+})

@@ -5,10 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "dev:worker": "wrangler dev",
     "build": "tsc",
     "start": "node dist/index.js",
+    "deploy": "wrangler deploy",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit push",
+    "d1:migrate": "wrangler d1 migrations apply refsus-db",
+    "d1:seed:generate": "tsx scripts/generate-seed-sql.ts",
+    "d1:seed": "wrangler d1 execute refsus-db --file=scripts/seed.sql",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "biome check .",
@@ -28,11 +33,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.11",
+    "@cloudflare/workers-types": "^4.20260410.1",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^25.5.2",
     "drizzle-kit": "^0.31.10",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.4",
+    "wrangler": "^4.81.1"
   }
 }

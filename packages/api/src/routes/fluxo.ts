@@ -1,7 +1,5 @@
-import { readFileSync } from 'node:fs'
 import { createRoute, OpenAPIHono, z } from '@hono/zod-openapi'
-
-const fluxoData = JSON.parse(readFileSync('data/fluxo_notificacao.json', 'utf-8'))
+import fluxoData from '../../data/fluxo_notificacao.json'
 
 const app = new OpenAPIHono()
 

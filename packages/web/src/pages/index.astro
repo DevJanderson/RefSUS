@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SearchDoencas from "../components/SearchDoencas.vue";
+
+const API_URL = import.meta.env.PUBLIC_API_URL || "http://localhost:8003";
+
+let doencas = 0;
+let sintomas = 0;
+let regioes = { total: 0, estados: 0, municipios: 0 };
+let totalNotificacoes = 0;
+let imediatas = 0;
+let semanais = 0;
+let apiOnline = false;
+
+try {
+  const [statsRes, notificacoesRes] = await Promise.all([
+    fetch(`${API_URL}/v1/stats`),
+    fetch(`${API_URL}/v1/notificacao-compulsoria`),
+  ]);
+
+  const stats = await statsRes.json();
+  const notificacoes = await notificacoesRes.json();
+
+  doencas = stats.data.doencas;
+  sintomas = stats.data.sintomas;
+  regioes = stats.data.regioes;
+  totalNotificacoes = notificacoes.meta?.total ?? notificacoes.data?.length ?? 0;
+  imediatas = notificacoes.meta?.imediatas ?? 0;
+  semanais = notificacoes.meta?.semanais ?? 0;
+  apiOnline = true;
+} catch {
+  console.warn("[web] API indisponivel em", API_URL);
+}
+---
+
+<Layout title="Inicio">
+  <main class="container mx-auto px-4 py-16">
+    <div class="flex flex-col items-center text-center space-y-8">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+        Ref<span class="text-primary">SUS</span>
+      </h1>
+      <p class="max-w-2xl text-lg text-muted-foreground">
+        API publica de dados de referencia do Sistema Unico de Saude.
+        CID-10, sintomas, regioes IBGE, notificacao compulsoria e fluxos
+        de vigilancia epidemiologica.
+      </p>
+
+      <div class="flex gap-4">
+        <a
+          href="/docs"
+          class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+        >
+          Documentacao da API
+        </a>
+        <a
+          href="https://github.com/DevJanderson/RefSUS"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
+        >
+          GitHub
+        </a>
+      </div>
+
+      {!apiOnline && (
+        <div class="w-full max-w-3xl rounded-md border border-destructive/50 bg-destructive/10 p-4 text-sm text-destructive">
+          API indisponivel. Inicie a API com <code class="font-mono bg-destructive/10 px-1 rounded">pnpm dev:api</code> para ver os dados em tempo real.
+        </div>
+      )}
+
+      <!-- Stats cards com dados reais da API -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-16 w-full max-w-5xl">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+          <p class="text-sm text-muted-foreground">Doencas (CID-10)</p>
+          <p class="text-3xl font-bold mt-1">{doencas.toLocaleString("pt-BR")}</p>
+          <p class="text-xs text-muted-foreground mt-1">codigos catalogados</p>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+          <p class="text-sm text-muted-foreground">Sintomas</p>
+          <p class="text-3xl font-bold mt-1">{sintomas.toLocaleString("pt-BR")}</p>
+          <p class="text-xs text-muted-foreground mt-1">capitulo XVIII (R00-R99)</p>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+          <p class="text-sm text-muted-foreground">Regioes IBGE</p>
+          <p class="text-3xl font-bold mt-1">{regioes.total.toLocaleString("pt-BR")}</p>
+          <p class="text-xs text-muted-foreground mt-1">
+            {regioes.estados} estados e {regioes.municipios.toLocaleString("pt-BR")} municipios
+          </p>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+          <p class="text-sm text-muted-foreground">Notificacao Compulsoria</p>
+          <p class="text-3xl font-bold mt-1">{totalNotificacoes}</p>
+          <p class="text-xs text-muted-foreground mt-1">
+            {imediatas} imediatas, {semanais} semanais
+          </p>
+        </div>
+      </div>
+
+      <!-- Busca interativa com Vue -->
+      <div class="w-full max-w-3xl mt-12">
+        <h2 class="text-2xl font-semibold mb-4">Buscar doenca (CID-10)</h2>
+        <SearchDoencas client:load apiUrl={API_URL} />
+      </div>
+    </div>
+  </main>
+</Layout>

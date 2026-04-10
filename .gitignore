@@ -23,5 +23,12 @@ Thumbs.db
 # Logs
 *.log
 
+# Generated files
+packages/api/scripts/seed.sql
+
+# Cloudflare
+.wrangler
+.dev.vars
+
 # Playwright
 .playwright-cli
