@@ -1,0 +1,234 @@
+{
+  "fontes": [
+    {
+      "documento": "Lei nº 6.259/1975",
+      "descricao": "Cria o sistema nacional de vigilância epidemiológica e obriga a notificação",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6259.htm"
+    },
+    {
+      "documento": "Lei nº 8.080/1990 (Lei Orgânica do SUS)",
+      "descricao": "Reforça a notificação como dever de todos os profissionais e serviços de saúde",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8080.htm"
+    },
+    {
+      "documento": "Portaria GM/MS nº 217, de 1º de março de 2023",
+      "descricao": "Lista Nacional de Notificação Compulsória de Doenças, Agravos e Eventos (LNCD) vigente",
+      "url": "https://www.in.gov.br/en/web/dou/-/portaria-gm/ms-n-217-de-1-de-marco-de-2023-467898809"
+    },
+    {
+      "documento": "Guia de Vigilância em Saúde — 6ª edição (2024)",
+      "descricao": "Procedimentos operacionais para cada doença, incluindo fluxos de notificação",
+      "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/guia-de-vigilancia-em-saude"
+    },
+    {
+      "documento": "Manual de Normas e Rotinas do SINAN — 2ª edição",
+      "descricao": "Operação técnica do SINAN",
+      "url": "https://portalsinan.saude.gov.br"
+    },
+    {
+      "documento": "Art. 269 — Código Penal Brasileiro",
+      "descricao": "Omissão de notificação de doença compulsória é infração penal (detenção de 6 meses a 2 anos + multa)",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+    }
+  ],
+  "sistemas": {
+    "sinan_online": {
+      "nome": "SINAN Online",
+      "descricao": "Sistema web para digitação e consulta de notificações compulsórias",
+      "url": "https://sinan.saude.gov.br",
+      "status": "Ativo — substituindo progressivamente o SINAN Net"
+    },
+    "sinan_net": {
+      "nome": "SINAN Net",
+      "descricao": "Aplicação desktop para digitação de notificações (instalada localmente nos municípios)",
+      "url": "https://portalsinan.saude.gov.br",
+      "status": "Legado — ainda usado em muitos municípios"
+    },
+    "esus_notifica": {
+      "nome": "e-SUS Notifica",
+      "descricao": "Plataforma web para notificações de emergência (COVID-19, Influenza/SRAG, Mpox)",
+      "url": "https://notifica.saude.gov.br",
+      "status": "Ativo para doenças específicas"
+    },
+    "gal": {
+      "nome": "GAL — Gerenciador de Ambiente Laboratorial",
+      "descricao": "Sistema laboratorial — resultados são vinculados ao SINAN pelo número de notificação",
+      "url": "https://gal.saude.gov.br",
+      "status": "Ativo"
+    },
+    "cievs": {
+      "nome": "CIEVS — Centro de Informações Estratégicas em Vigilância em Saúde",
+      "descricao": "Central 24h que recebe e gerencia notificações imediatas (municipal, estadual e federal)",
+      "telefone": "Disque Notifica: 0800-644-6645",
+      "status": "Ativo 24/7"
+    }
+  },
+  "fichas": {
+    "fin": {
+      "nome": "Ficha Individual de Notificação (FIN)",
+      "descricao": "Formulário universal obrigatório para TODA notificação compulsória",
+      "download": "https://portalsinan.saude.gov.br/fichas-de-notificacao",
+      "campos_obrigatorios": [
+        "Agravo/Doença (código CID-10)",
+        "Data da notificação",
+        "Município de notificação (código IBGE)",
+        "Unidade de saúde notificadora (código CNES)",
+        "Nome completo do paciente",
+        "Data de nascimento ou idade",
+        "Sexo",
+        "Município de residência (código IBGE)"
+      ]
+    },
+    "investigacao": {
+      "nome": "Ficha de Investigação Epidemiológica",
+      "descricao": "Formulário específico por agravo, preenchido durante a investigação",
+      "download": "https://portalsinan.saude.gov.br/fichas-de-notificacao",
+      "nota": "Cada agravo tem sua ficha própria (ex: Ficha de Dengue, Ficha de Tuberculose)"
+    }
+  },
+  "fluxos": {
+    "imediata": {
+      "tipo": "Notificação Imediata",
+      "prazo": "Até 24 horas após a suspeita",
+      "base_legal": "Portaria GM/MS nº 217/2023, Art. 4 e Anexo V",
+      "passos": [
+        {
+          "ordem": 1,
+          "acao": "Identificar caso suspeito ou confirmado",
+          "responsavel": "Profissional de saúde (médico, enfermeiro, etc.)",
+          "detalhes": "Qualquer profissional de saúde, em qualquer serviço (público ou privado), que identifique suspeita de doença da lista de notificação imediata.",
+          "base_legal": "Lei 6.259/1975, Art. 8"
+        },
+        {
+          "ordem": 2,
+          "acao": "Comunicar imediatamente à Vigilância Epidemiológica Municipal",
+          "responsavel": "Profissional de saúde",
+          "detalhes": "Comunicação pelo meio mais rápido disponível: telefone, e-mail ou entrada direta no sistema. NÃO aguardar preenchimento da ficha.",
+          "prazo": "Até 24 horas",
+          "base_legal": "Portaria 217/2023, Art. 4"
+        },
+        {
+          "ordem": 3,
+          "acao": "Preencher a Ficha Individual de Notificação (FIN)",
+          "responsavel": "Profissional de saúde",
+          "detalhes": "Preencher todos os campos obrigatórios: agravo (CID-10), dados do paciente, município de notificação (IBGE), unidade de saúde (CNES), data dos primeiros sintomas.",
+          "formulario": "FIN — download em portalsinan.saude.gov.br/fichas-de-notificacao"
+        },
+        {
+          "ordem": 4,
+          "acao": "Vigilância Municipal notifica Estado e Ministério da Saúde em paralelo",
+          "responsavel": "Secretaria Municipal de Saúde (SMS)",
+          "detalhes": "A notificação imediata é PARALELA: município, estado e nível federal são notificados simultaneamente em até 24h. O CIEVS federal pode ser acionado pelo Disque Notifica: 0800-644-6645.",
+          "prazo": "Até 24 horas",
+          "base_legal": "Portaria 217/2023, Anexo V"
+        },
+        {
+          "ordem": 5,
+          "acao": "Digitar a notificação no SINAN",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Entrada dos dados no SINAN Online (sinan.saude.gov.br) ou SINAN Net. Para COVID-19/Influenza/SRAG, usar também o e-SUS Notifica (notifica.saude.gov.br).",
+          "sistema": "SINAN Online ou SINAN Net"
+        },
+        {
+          "ordem": 6,
+          "acao": "Iniciar investigação epidemiológica",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Investigação deve começar em até 48 horas. Preencher a Ficha de Investigação específica do agravo. Identificar fonte de infecção, contatos e adotar medidas de controle.",
+          "prazo": "Até 48 horas após notificação"
+        },
+        {
+          "ordem": 7,
+          "acao": "Encerrar o caso no SINAN",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Classificação final: Confirmado ou Descartado. Prazo máximo de 60 dias para encerramento (alguns agravos têm prazos específicos).",
+          "prazo": "Até 60 dias"
+        }
+      ]
+    },
+    "semanal": {
+      "tipo": "Notificação Semanal",
+      "prazo": "Até o encerramento da semana epidemiológica (domingo a sábado)",
+      "base_legal": "Portaria GM/MS nº 217/2023, Art. 4",
+      "passos": [
+        {
+          "ordem": 1,
+          "acao": "Identificar caso suspeito ou confirmado",
+          "responsavel": "Profissional de saúde (médico, enfermeiro, etc.)",
+          "detalhes": "Qualquer profissional de saúde, em qualquer serviço (público ou privado).",
+          "base_legal": "Lei 6.259/1975, Art. 8"
+        },
+        {
+          "ordem": 2,
+          "acao": "Preencher a Ficha Individual de Notificação (FIN)",
+          "responsavel": "Profissional de saúde",
+          "detalhes": "Preencher todos os campos obrigatórios: agravo (CID-10), dados do paciente, município de notificação (IBGE), unidade de saúde (CNES), data dos primeiros sintomas.",
+          "formulario": "FIN — download em portalsinan.saude.gov.br/fichas-de-notificacao"
+        },
+        {
+          "ordem": 3,
+          "acao": "Encaminhar a ficha à Vigilância Epidemiológica Municipal",
+          "responsavel": "Profissional de saúde / Unidade de saúde",
+          "detalhes": "A ficha preenchida é enviada à Secretaria Municipal de Saúde (SMS) dentro da semana epidemiológica.",
+          "prazo": "Dentro da semana epidemiológica"
+        },
+        {
+          "ordem": 4,
+          "acao": "Digitar a notificação no SINAN",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Entrada dos dados no SINAN Online (sinan.saude.gov.br) ou SINAN Net.",
+          "sistema": "SINAN Online ou SINAN Net"
+        },
+        {
+          "ordem": 5,
+          "acao": "Iniciar investigação epidemiológica",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Preencher a Ficha de Investigação específica do agravo. Prazo de início varia por doença (geralmente até 7 dias).",
+          "prazo": "Até 7 dias"
+        },
+        {
+          "ordem": 6,
+          "acao": "Transferir dados ao Estado",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Transferência semanal dos dados do SINAN para a Secretaria Estadual de Saúde (SES). Feita automaticamente pelo SINAN Online ou em lote pelo SINAN Net.",
+          "prazo": "Semanal"
+        },
+        {
+          "ordem": 7,
+          "acao": "Encerrar o caso no SINAN",
+          "responsavel": "Vigilância Epidemiológica Municipal",
+          "detalhes": "Classificação final: Confirmado ou Descartado. Prazo máximo de 60 dias para encerramento.",
+          "prazo": "Até 60 dias"
+        }
+      ]
+    }
+  },
+  "cadeia_notificacao": {
+    "descricao": "Fluxo ascendente de dados no sistema de vigilância",
+    "niveis": [
+      {
+        "nivel": 1,
+        "nome": "Unidade de Saúde",
+        "responsavel": "Profissional de saúde",
+        "acao": "Preenche FIN, comunica à vigilância municipal"
+      },
+      {
+        "nivel": 2,
+        "nome": "Secretaria Municipal de Saúde (SMS)",
+        "responsavel": "Vigilância Epidemiológica Municipal",
+        "acao": "Digita no SINAN, investiga, adota medidas de controle"
+      },
+      {
+        "nivel": 3,
+        "nome": "Secretaria Estadual de Saúde (SES)",
+        "responsavel": "Vigilância Epidemiológica Estadual",
+        "acao": "Consolida dados municipais, revisão de qualidade, apoio técnico"
+      },
+      {
+        "nivel": 4,
+        "nome": "Ministério da Saúde (MS/SVS/DATASUS)",
+        "responsavel": "Secretaria de Vigilância em Saúde e Ambiente (SVSA)",
+        "acao": "Consolida dados nacionais, produz boletins, coordena resposta, reporta à OMS"
+      }
+    ]
+  }
+}

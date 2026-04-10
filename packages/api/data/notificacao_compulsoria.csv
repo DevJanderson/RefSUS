@@ -1,0 +1,58 @@
+agravo,codigos_cid10,tipo_notificacao
+Botulismo,A05.1,imediata
+Cólera,A00;A00.0;A00.1;A00.9,imediata
+Coqueluche,A37;A37.0;A37.1;A37.8;A37.9,semanal
+Chikungunya,A92.0,imediata
+Dengue,A90;A91,semanal
+Dengue - óbito,A90;A91,imediata
+Difteria,A36;A36.0;A36.1;A36.2;A36.3;A36.8;A36.9,semanal
+Doença de Chagas aguda,B57.0;B57.1,imediata
+Doença de Creutzfeldt-Jakob,A81.0,semanal
+Doença invasiva por Haemophilus influenzae,G00.0;A41.3;A49.2;J14,imediata
+Doença meningocócica e outras meningites,A39;A39.0;A39.1;A39.2;A39.3;A39.4;A39.5;A39.8;A39.9;G00;G00.1;G00.2;G00.3;G00.8;G00.9;G03;G03.0;G03.1;G03.2;G03.8;G03.9,imediata
+Esquistossomose,B65;B65.0;B65.1;B65.2;B65.3;B65.8;B65.9,semanal
+Febre Amarela,A95;A95.0;A95.1;A95.9,imediata
+Febre do Nilo Ocidental,A92.3,imediata
+Febre Maculosa e outras Riquetsioses,A77;A77.0;A77.1;A77.2;A77.3;A77.8;A77.9,imediata
+Febre Tifoide,A01.0,semanal
+Hanseníase,A30;A30.0;A30.1;A30.2;A30.3;A30.4;A30.5;A30.8;A30.9,semanal
+Hantavirose,A98.5;B33.4;J12.8,imediata
+Hepatite A,B15;B15.0;B15.9,semanal
+Hepatite B,B16;B16.0;B16.1;B16.2;B16.9;B18.0;B18.1,semanal
+Hepatite C,B17.1;B18.2,semanal
+Hepatite D,B17.0;B18.0,semanal
+Hepatite E,B17.2,semanal
+HIV/AIDS,B20;B21;B22;B23;B24;Z21,semanal
+Influenza humana por novo subtipo viral,J09;J10;J10.0;J10.1;J10.8;J11;J11.0;J11.1;J11.8,imediata
+Leishmaniose tegumentar americana,B55.1;B55.2;B55.9,semanal
+Leishmaniose visceral,B55.0,semanal
+Leptospirose,A27;A27.0;A27.8;A27.9,semanal
+Malária,B50;B50.0;B50.8;B50.9;B51;B51.0;B51.8;B51.9;B52;B52.0;B52.8;B52.9;B53;B53.0;B53.1;B53.8;B54,semanal
+Monkeypox (Mpox),B04,imediata
+Peste,A20;A20.0;A20.1;A20.2;A20.3;A20.7;A20.8;A20.9,imediata
+Poliomielite / Paralisia flácida aguda,A80;A80.0;A80.1;A80.2;A80.3;A80.4;A80.9;G82.0,imediata
+Raiva humana,A82;A82.0;A82.1;A82.9,imediata
+Rubéola,B06;B06.0;B06.8;B06.9,imediata
+Sarampo,B05;B05.0;B05.1;B05.2;B05.3;B05.4;B05.8;B05.9,imediata
+Sífilis adquirida,A51;A51.0;A51.1;A51.2;A51.3;A51.4;A51.5;A51.9;A52;A52.0;A52.1;A52.2;A52.3;A52.7;A52.8;A52.9;A53;A53.0;A53.9,semanal
+Sífilis congênita,A50;A50.0;A50.1;A50.2;A50.3;A50.4;A50.5;A50.6;A50.7;A50.9,semanal
+Sífilis em gestante,A51;A52;A53;O98.1,semanal
+Síndrome da Rubéola Congênita,P35.0,imediata
+Síndrome Respiratória Aguda Grave (SRAG),J80;U04.9;J12.8;J22,imediata
+Tétano acidental,A35,semanal
+Tétano neonatal,A33,imediata
+Toxoplasmose gestacional e congênita,B58;B58.0;B58.1;B58.2;B58.3;B58.8;B58.9;P37.1,semanal
+Tuberculose,A15;A15.0;A15.1;A15.2;A15.3;A15.4;A15.5;A15.6;A15.7;A15.8;A15.9;A16;A16.0;A16.1;A16.2;A16.3;A16.4;A16.5;A16.7;A16.8;A16.9;A17;A17.0;A17.1;A17.8;A17.9;A18;A18.0;A18.1;A18.2;A18.3;A18.4;A18.5;A18.6;A18.7;A18.8;A19;A19.0;A19.1;A19.2;A19.8;A19.9,semanal
+Varicela - caso grave internado ou óbito,B01;B01.0;B01.1;B01.2;B01.8;B01.9,imediata
+Violência doméstica sexual e/ou outras violências,T74;T74.0;T74.1;T74.2;T74.3;T74.8;T74.9;Y04;Y05;Y06;Y07,semanal
+Zika vírus,U06;U06.0;U06.1;U06.9;A92.8,imediata
+Síndrome congênita associada ao Zika vírus,P35.8;Q02,imediata
+Covid-19,U07.1;U07.2;B34.2,semanal
+Covid-19 - óbito,U07.1;U07.2;B34.2,imediata
+Antraz pneumônico,A22.1,imediata
+Tularemia,A21;A21.0;A21.1;A21.2;A21.3;A21.7;A21.8;A21.9,imediata
+Varíola,B03,imediata
+Ebola,A98.4,imediata
+Marburg,A98.3,imediata
+Síndrome de Guillain-Barré,G61.0,semanal
+Acidentes por animais transmissores da raiva,T14.1;W54;W55;W56;W57,semanal

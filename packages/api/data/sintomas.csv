@@ -1,0 +1,388 @@
+codigo,nome
+R00,Anormalidades do batimento cardíaco
+R00.0,Taquicardia não especificada
+R00.1,Bradicardia não especificada
+R00.2,Palpitações
+R00.8,Outras anormalidades e as não especificadas do batimento cardíaco
+R01,Sopros e outros ruídos cardíacos
+R01.0,Sopros cardíacos benignos ou inocentes
+R01.1,"Sopro cardíaco, não especificado"
+R01.2,Outros ruídos cardíacos
+R02,Gangrena não classificada em outra parte
+R03,Valor anormal da pressão arterial sem diagnóstico
+R03.0,Valor elevado da pressão arterial sem o diagnóstico de hipertensão
+R03.1,Valor baixo da pressão arterial não específico
+R04,Hemorragia das vias respiratórias
+R04.0,Epistaxis
+R04.1,Hemorragia da garganta
+R04.2,Hemoptise
+R04.8,Hemorragia de outras localizações das vias respiratórias
+R04.9,Hemorragia não especificada das vias respiratórias
+R05,Tosse
+R06,Anormalidades da respiração
+R06.0,Dispnéia
+R06.1,Estridor
+R06.2,Respiração ofegante
+R06.3,Respiração periódica
+R06.4,Hiperventilação
+R06.5,Respiração pela boca
+R06.6,Soluço
+R06.7,Espirro
+R06.8,Outras anormalidades e as não especificadas da respiração
+R07,Dor de garganta e no peito
+R07.0,Dor de garganta
+R07.1,Dor torácica ao respirar
+R07.2,Dor precordial
+R07.3,Outra dor torácica
+R07.4,"Dor torácica, não especificada"
+R09,Outros sintomas e sinais relativos aos aparelhos circulatório e respiratório
+R09.0,Asfixia
+R09.1,Pleurisia
+R09.2,Parada respiratória
+R09.3,Escarro anormal
+R09.8,Outros sintomas e sinais especificados relativos aos aparelhos circulatório e respiratório
+R10,Dor abdominal e pélvica
+R10.0,Abdome agudo
+R10.1,Dor localizada no abdome superior
+R10.2,Dor pélvica e perineal
+R10.3,Dor localizada em outras partes do abdome inferior
+R10.4,Outras dores abdominais e as não especificadas
+R11,Náusea e vômitos
+R12,Pirose
+R13,Disfagia
+R14,Flatulência e afecções correlatas
+R15,Incontinência fecal
+R16,Hepatomegalia e esplenomegalia não classificadas em outra parte
+R16.0,Hepatomegalia não classificada em outra parte
+R16.1,Esplenomegalia não classificada em outra parte
+R16.2,Hepatomegalia com esplenomegalia não classificada em outra parte
+R17,Icterícia não especificada
+R18,Ascite
+R19,Outros sintomas e sinais relativos ao aparelho digestivo e ao abdome
+R19.0,"Massa, tumoração ou tumefação intra-abdominal e pélvica"
+R19.1,Ruídos hidroaéreos anormais
+R19.2,Peristaltismo visível
+R19.3,Rigidez abdominal
+R19.4,Alteração do hábito intestinal
+R19.5,Outras anormalidades fecais
+R19.6,Halitose
+R19.8,Outros sintomas e sinais especificados relativos ao aparelho digestivo e ao abdome
+R20,Distúrbios da sensibilidade cutânea
+R20.0,Anestesia cutânea
+R20.1,Hipoestesia cutânea
+R20.2,Parestesias cutâneas
+R20.3,Hiperestesia
+R20.8,Outros distúrbios e os não especificadas da sensibilidade cutânea
+R21,Eritema e outras erupções cutâneas não especificadas
+R22,"Tumefação, massa ou tumoração localizadas da pele e do tecido subcutâneo"
+R22.0,"Tumefação, massa ou tumoração localizadas da cabeça"
+R22.1,"Tumefação, massa ou tumoração localizadas do pescoço"
+R22.2,"Tumefação, massa ou tumoração localizadas do tronco"
+R22.3,"Tumefação, massa ou tumoração localizadas de membro superior"
+R22.4,"Tumefação, massa ou tumoração localizadas no membro inferior"
+R22.7,"Tumefação, massa ou tumoração localizadas de múltiplas localizações"
+R22.9,"Tumefação, massa ou tumoração não especificadas, localizadas"
+R23,Outras alterações cutâneas
+R23.0,Cianose
+R23.1,Palidez
+R23.2,Rubor
+R23.3,Equimoses espontâneas
+R23.4,Alterações na textura da pele
+R23.8,Outras alterações da pele e as não especificadas
+R25,Movimentos involuntários anormais
+R25.0,Movimentos anormais da cabeça
+R25.1,Tremor não especificado
+R25.2,Cãibras e espasmos
+R25.3,Fasciculação
+R25.8,Outros movimentos involuntários anormais e os não especificados
+R26,Anormalidades da marcha e da mobilidade
+R26.0,Marcha atáxica
+R26.1,Marcha paralítica
+R26.2,Dificuldade para andar não classificada em outra parte
+R26.8,Outras anormalidades da marcha e da mobilidade e as não especificadas
+R27,Outros distúrbios da coordenação
+R27.0,Ataxia não especificada
+R27.8,Outros distúrbios da coordenação e os não especificados
+R29,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular
+R29.0,Tetania
+R29.1,Meningismo
+R29.2,Reflexos anormais
+R29.3,Postura anormal
+R29.4,Quadril estalante
+R29.6,"Tendência a queda, não classificada em outra parte"
+R29.8,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados
+R30,Dor associada à micção
+R30.0,Disúria
+R30.1,Tenesmo vesical
+R30.9,"Micção dolorosa, não especificada"
+R31,Hematúria não especificada
+R32,Incontinência urinária não especificada
+R33,Retenção urinária
+R34,Anúria e oligúria
+R35,Poliúria
+R36,Secreção uretral
+R39,Outros sintomas e sinais relativos ao aparelho urinário
+R39.0,Extravasamento de urina
+R39.1,Outras dificuldades à micção
+R39.2,Uremia extra-renal
+R39.8,Outros sintomas e sinais relativos ao aparelho urinário e os não especificados
+R40,"Sonolência, estupor e coma"
+R40.0,Sonolência
+R40.1,Estupor
+R40.2,Coma não especificado
+R41,Outros sintomas e sinais relativos à função cognitiva e à consciência
+R41.0,Desorientação não especificada
+R41.1,Amnésia anterógrada
+R41.2,Amnésia retrógrada
+R41.3,Outra amnésia
+R41.8,Outros sintomas e sinais especificados relativos às funções cognitivas e à consciência
+R42,Tontura e instabilidade
+R43,Distúrbios do olfato e do paladar
+R43.0,Anosmia
+R43.1,Parosmia
+R43.2,Parageusia
+R43.8,Outros distúrbios do olfato e do paladar e os não especificados
+R44,Outros sintomas e sinais relativos às sensações e às percepções gerais
+R44.0,Alucinações auditivas
+R44.1,Alucinações visuais
+R44.2,Outras alucinações
+R44.3,Alucinações não especificadas
+R44.8,Outros sintomas e sinais especificados relativos às sensações e percepções gerais
+R45,Sintomas e sinais relativos ao estado emocional
+R45.0,Nervosismo
+R45.1,Agitação e inquietação
+R45.2,Tristeza
+R45.3,Apatia e desinteresse
+R45.4,Irritabilidade e mau humor
+R45.5,Hostilidade
+R45.6,Violência física
+R45.7,"Estado de choque emocional e tensão, não especificado"
+R45.8,Outros sintomas e sinais relativos ao estado emocional
+R46,Sintomas e sinais relativos à aparência e ao comportamento
+R46.0,Baixo nível de higiene pessoal
+R46.1,Aparência pessoal bizarra
+R46.2,Comportamento estranho e inexplicável
+R46.3,Hiperatividade
+R46.4,Lentidão e baixa reatividade
+R46.5,Personalidade suspeita e evasiva
+R46.6,"Inquietação e preocupação exageradas com acontecimentos ""estressantes"""
+R46.7,Verborragia e pormenores circunstanciais mascarando o motivo da consulta
+R46.8,Outros sintomas e sinais relativos à aparência e ao comportamento
+R47,Distúrbios da fala não classificados em outra parte
+R47.0,Disfasia e afasia
+R47.1,Disartria e anartria
+R47.8,Outros distúrbios da fala e os não especificados
+R48,"Dislexia e outras disfunções simbólicas, não classificadas em outra parte"
+R48.0,Dislexia e alexia
+R48.1,Agnosia
+R48.2,Apraxia
+R48.8,Outras disfunções simbólicas e as não especificadas
+R49,Distúrbios da voz
+R49.0,Disfonia
+R49.1,Afonia
+R49.2,Hipernasalidade e hiponasalidade
+R49.8,Outros distúrbios da voz e os não especificados
+R50,Febre de origem desconhecida e de outras origens
+R50.2,Febre induzida por drogas
+R50.8,Outra febre especificada
+R50.9,Febre não especificada
+R51,Cefaléia
+R52,Dor não classificada em outra parte
+R52.0,Dor aguda
+R52.1,Dor crônica intratável
+R52.2,Outra dor crônica
+R52.9,Dor não especificada
+R53,"Mal estar, fadiga"
+R54,Senilidade
+R55,Síncope e colapso
+R56,"Convulsões, não classificadas em outra parte"
+R56.0,Convulsões febris
+R56.8,Outras convulsões e as não especificadas
+R57,Choque não classificado em outra parte
+R57.0,Choque cardiogênico
+R57.1,Choque hipovolêmico
+R57.8,Outras formas de choque
+R57.9,Choque não especificado
+R58,Hemorragia não classificada em outra parte
+R59,Aumento de volume dos gânglios linfáticos
+R59.0,Aumento de volume localizado de gânglios linfáticos
+R59.1,Aumento de volume generalizado de gânglios linfáticos
+R59.9,"Adenomegalia ou aumento de volume dos gânglios linfáticos, não especificado"
+R60,Edema não classificado em outra parte
+R60.0,Edema localizado
+R60.1,Edema generalizado
+R60.9,Edema não especificado
+R61,Hiperidrose
+R61.0,Hiperidrose localizada
+R61.1,Hiperidrose generalizada
+R61.9,Hiperidrose não especificada
+R62,Retardo do desenvolvimento fisiológico normal
+R62.0,Retardo de maturação
+R62.8,Outras formas de retardo do desenvolvimento fisiológico normal
+R62.9,"Retardo do desenvolvimento fisiológico normal, não especificado"
+R63,Sintomas e sinais relativos à ingestão de alimentos e líquidos
+R63.0,Anorexia
+R63.1,Polidipsia
+R63.2,Polifagia
+R63.3,Dificuldades de alimentação e erros na administração de alimentos
+R63.4,Perda de peso anormal
+R63.5,Ganho de peso anormal
+R63.8,Outros sintomas e sinais relativos a ingestão de alimentos e de líquidos
+R64,Caquexia
+R68,Outros sintomas e sinais gerais
+R68.0,Hipotermia não associada à baixa temperatura ambiental
+R68.1,Sintomas não específicos peculiares à infância
+R68.2,"Boca seca, não especificada"
+R68.3,Baqueteamento dos dedos
+R68.8,Outros sintomas e sinais gerais especificados
+R69,Causas desconhecidas e não especificadas de morbidade
+R70,Velocidade de hemossedimentação elevada e outras anormalidades da viscosidade plasmática
+R70.0,Velocidade de hemossedimentação elevada
+R70.1,Viscosidade plasmática anormal
+R71,Anormalidade das hemácias
+R72,Anormalidade dos leucócitos não classificada em outra parte
+R73,Aumento da glicemia
+R73.0,Teste de tolerância a glicose anormal
+R73.9,Hiperglicemia não especificada
+R74,Anormalidades dos níveis de enzimas séricas
+R74.0,Aumento dos níveis de transaminases e da desidrogenase lática (DHL)
+R74.8,Níveis anormais de outras enzimas séricas
+R74.9,"Anormalidade dos níveis de enzimas séricas, não especificada"
+R75,Evidência laboratorial do vírus da imunodeficiência humana [HIV]
+R76,Outros achados imunológicos anormais no soro
+R76.0,Título aumentado de anticorpos
+R76.1,Reação anormal ao teste da tuberculina
+R76.2,Exame sorológico falso positivo para sífilis
+R76.8,Outros achados imunológicos especificados anormais no soro
+R76.9,"Achado anormal de exame imunológico sérico, não especificado"
+R77,Outras anormalidades das proteínas plasmáticas
+R77.0,Anormalidade da albumina
+R77.1,Anormalidade das globulinas
+R77.2,Anormalidade da alfafetoproteína
+R77.8,Outras anormalidades especificadas das proteínas plasmáticas
+R77.9,"Anormalidades de proteína plasmática, não especificadas"
+R78,Presença de drogas e de outras substâncias normalmente não encontradas no sangue
+R78.0,Presença de álcool no sangue
+R78.1,Presença de opiáceos no sangue
+R78.2,Presença de cocaína no sangue
+R78.3,Presença de alucinógeno no sangue
+R78.4,"Presença de outras drogas com potencial de causar dependência, no sangue"
+R78.5,Presença de droga psicotrópica no sangue
+R78.6,Presença de agente esteróide no sangue
+R78.7,Presença de nível anormal de metais pesados no sangue
+R78.8,Presença de outras substâncias especificadas não normalmente encontradas no sangue
+R78.9,Presença de substância não especificada normalmente não encontrada no sangue
+R79,Outros achados anormais de exames químicos do sangue
+R79.0,Anormalidade do nível de elementos minerais no sangue
+R79.8,Outros achados anormais especificados de exames químicos do sangue
+R79.9,"Achado anormal de exame químico do sangue, não especificado"
+R80,Proteinúria isolada
+R81,Glicosúria
+R82,Outros achados anormais na urina
+R82.0,Quilúria
+R82.1,Mioglobinúria
+R82.2,Biliúria
+R82.3,Hemoglobinúria
+R82.4,Acetonúria
+R82.5,"Níveis urinários elevados de drogas, medicamentos e substâncias biológicas"
+R82.6,Níveis urinários anormais de substâncias cuja origem é essencialmente não-medicinal
+R82.7,Achados anormais ao exame microbiológico da urina
+R82.8,Achados anormais ao exame citológico e histológico da urina
+R82.9,Outros achados anormais na urina e os não especificados
+R83,Achados anormais no líquido cefalorraquidiano
+R83.0,Achados anormais no líquido cefalorraquidiano - nível enzimático anormal
+R83.1,Achados anormais no líquido cefalorraquidiano - nível hormonal anormal
+R83.2,"Achados anormais no líquido cefalorraquidiano - nível anormal de outras drogas, medicamentos e substâncias biológicas"
+R83.3,Achados anormais no líquido cefalorraquidiano - nível anormal de substâncias cuja origem é essencialmente não medicinal
+R83.4,Achados anormais no líquido cefalorraquidiano - achados imunológicos anormais
+R83.5,Achados anormais no líquido cefalorraquidiano - achados microbiológicos anormais
+R83.6,Achados anormais no líquido cefalorraquidiano - achados citológicos anormais
+R83.7,Achados anormais no líquido cefalorraquidiano - achados histológicos anormais
+R83.8,Achados anormais no líquido cefalorraquidiano - outros achados anormais
+R83.9,Achados anormais no líquido cefalorraquidiano - achado anormal não especificado
+R84,Achados anormais de material proveniente dos órgãos respiratórios e do tórax
+R84.0,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - nível enzimático anormal
+R84.1,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - nível hormonal anormal
+R84.2,"Achados anormais de material proveniente dos órgãos respiratórios e do tórax - nível anormal de outras drogas, medicamentos e substâncias biológicas"
+R84.3,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - nível anormal de substâncias cuja origem é essencialmente não medicinal
+R84.4,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - achados imunológicos anormais
+R84.5,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - achados microbiológicos anormais
+R84.6,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - achados citológicos anormais
+R84.7,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - achados histológicos anormais
+R84.8,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - outros achados anormais
+R84.9,Achados anormais de material proveniente dos órgãos respiratórios e do tórax - achado anormal não especificado
+R85,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal
+R85.0,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - nível enzimático anormal
+R85.1,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - nível hormonal anormal
+R85.2,"Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - nível anormal de outras drogas, medicamentos e substâncias biológicas"
+R85.3,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - nível anormal de substâncias cuja origem é essencialmente não medicinal
+R85.4,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - achados imunológicos anormais
+R85.5,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - achados microbiológicos anormais
+R85.6,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - achados citológicos anormais
+R85.7,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - achados histológicos anormais
+R85.8,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - outros achados anormais
+R85.9,Achados anormais de material proveniente dos órgãos digestivos e da cavidade abdominal - achado anormal não especificado
+R86,Achados anormais de material proveniente dos órgãos genitais masculinos
+R86.0,Achados anormais de material proveniente dos órgãos genitais masculinos - nível enzimático anormal
+R86.1,Achados anormais de material proveniente dos órgãos genitais masculinos - nível hormonal anormal
+R86.2,"Achados anormais de material proveniente dos órgãos genitais masculinos - nível anormal de outras drogas, medicamentos e substâncias biológicas"
+R86.3,Achados anormais de material proveniente dos órgãos genitais masculinos - nível anormal de substâncias cuja origem é essencialmente não medicinal
+R86.4,Achados anormais de material proveniente dos órgãos genitais masculinos - achados imunológicos anormais
+R86.5,Achados anormais de material proveniente dos órgãos genitais masculinos - achados microbiológicos anormais
+R86.6,Achados anormais de material proveniente dos órgãos genitais masculinos - achados citológicos anormais
+R86.7,Achados anormais de material proveniente dos órgãos genitais masculinos - achados histológicos anormais
+R86.8,Achados anormais de material proveniente dos órgãos genitais masculinos - outros achados anormais
+R86.9,Achados anormais de material proveniente dos órgãos genitais masculinos - achado anormal não especificado
+R87,Achados anormais de material proveniente dos órgãos genitais femininos
+R87.0,Achados anormais de material proveniente dos órgãos genitais femininos - nível enzimático anormal
+R87.1,Achados anormais de material proveniente dos órgãos genitais femininos - nível hormonal anormal
+R87.2,"Achados anormais de material proveniente dos órgãos genitais femininos - nível anormal de outras drogas, medicamentos e substâncias biológicas"
+R87.3,Achados anormais de material proveniente dos órgãos genitais femininos - nível anormal de substâncias cuja origem é essencialmente não medicinal
+R87.4,Achados anormais de material proveniente dos órgãos genitais femininos - achados imunológicos anormais
+R87.5,Achados anormais de material proveniente dos órgãos genitais femininos - achados microbiológicos anormais
+R87.6,Achados anormais de material proveniente dos órgãos genitais femininos - achados citológicos anormais
+R87.7,Achados anormais de material proveniente dos órgãos genitais femininos - achados histológicos anormais
+R87.8,Achados anormais de material proveniente dos órgãos genitais femininos - outros achados anormais
+R87.9,Achados anormais de material proveniente dos órgãos genitais femininos - achado anormal não especificado
+R89,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos"
+R89.0,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - nível enzimático anormal"
+R89.1,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - nível hormonal anormal"
+R89.2,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - nível anormal de outras drogas, medicamentos e substâncias biológicas"
+R89.3,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - nível anormal de substâncias cuja origem é essencialmente não medicinal"
+R89.4,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - achados imunológicos anormais"
+R89.5,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - achados microbiológicos anormais"
+R89.6,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - achados citológicos anormais"
+R89.7,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - achados histológicos anormais"
+R89.8,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - outros achados anormais"
+R89.9,"Achados anormais de material proveniente de outros órgãos, aparelhos, sistemas e tecidos - achado anormal não especificado"
+R90,Resultados anormais de exames para diagnóstico por imagem do sistema nervoso central
+R90.0,Lesão intracraniana ocupando espaço
+R90.8,Outros resultados anormais de exames para diagnóstico por imagem do sistema nervoso central
+R91,"Achados anormais, de exames para diagnóstico por imagem, do pulmão"
+R92,"Achados anormais, de exames para diagnóstico por imagem, da mama"
+R93,Achados anormais de exames para diagnóstico por imagem de outras estruturas do corpo
+R93.0,Achados anormais de exames para diagnóstico por imagem do crânio e da cabeça não classificados em outra parte
+R93.1,Achados anormais de exames para diagnóstico por imagem do coração e da circulação coronariana
+R93.2,Achados anormais de exames para diagnóstico por imagem do fígado e das vias biliares
+R93.3,Achados anormais de exames para diagnóstico por imagem de outras partes do tubo digestivo
+R93.4,Achados anormais de exames para diagnóstico por imagem dos órgãos urinários
+R93.5,"Achados anormais de exames para diagnóstico por imagem de outras regiões do abdome, incluindo o retroperitônio"
+R93.6,Achados anormais de exames para diagnóstico por imagem dos membros
+R93.7,Achados anormais de exames para diagnóstico por imagem de outras partes do sistema osteomuscular
+R93.8,Achados anormais de exames diagnósticos por imagem de outras estruturas somáticas especificadas
+R94,Resultados anormais de estudos de função
+R94.0,Resultados anormais de estudos de função do sistema nervoso central
+R94.1,Resultados anormais de estudos de função do sistema nervoso periférico e dos órgãos dos sentidos
+R94.2,Resultados anormais de estudos da função pulmonar
+R94.3,Resultados anormais de estudos da função cardiovascular
+R94.4,Resultados anormais de estudos de função renal
+R94.5,Resultados anormais de estudos de função hepática
+R94.6,Resultados anormais de estudos de função tireoidiana
+R94.7,Resultados anormais de estudos de função de outras glândulas endócrinas
+R94.8,"Resultados anormais de estudos de função de outros órgãos, aparelhos e sistemas"
+R95,Síndrome da morte súbita na infância
+R96,Outras mortes súbitas de causa desconhecida
+R96.0,Morte instantânea
+R96.1,"Morte que ocorre em menos de 24 horas após o início dos sintomas, que não pode ser explicada"
+R98,Morte sem assistência
+R99,Outras causas mal definidas e as não especificadas de mortalidade

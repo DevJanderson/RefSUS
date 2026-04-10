@@ -1,0 +1,38 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "RefSUS — API pública de dados de referência do SUS",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit push",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "lint:fix": "biome check --fix ."
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.13",
+    "@hono/zod-openapi": "^1.2.4",
+    "@scalar/hono-api-reference": "0.10.6",
+    "better-sqlite3": "^12.8.0",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^17.4.1",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.12",
+    "hono-rate-limiter": "^0.5.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.11",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.2",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  }
+}
