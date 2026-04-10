@@ -1,5 +1,5 @@
-import { drizzle as drizzleD1 } from 'drizzle-orm/d1'
 import type { BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
+import { drizzle as drizzleD1 } from 'drizzle-orm/d1'
 import * as schema from './schema'
 
 type D1Db = ReturnType<typeof drizzleD1<typeof schema>>
