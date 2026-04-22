@@ -1,27 +1,44 @@
 # RefSUS
 
-API pública de dados de referência do SUS para saúde coletiva no Brasil.
+API pública brasileira de dados de referência em saúde — CID-10, regiões IBGE, notificação compulsória — pra quem constrói software médico, clínico ou de pesquisa.
 
-## O que é
+## Pra quem é
 
-RefSUS unifica as bases de dados que todo profissional de vigilância epidemiológica usa diariamente:
+Desenvolvedor construindo prontuário, app de clínica, telemedicina, dashboard epidemiológico ou integração com dados de saúde no Brasil. Se o seu projeto precisa resolver "código CID-10 → nome da doença", "município IBGE → UF", "essa doença exige notificação?" — o RefSUS devolve isso em uma chamada HTTP, sem você precisar processar CSV, baixar arquivo `.dbc` ou lidar com token da API da OMS.
 
-- **CID-10** — 2.045 doenças com capítulo, categoria, autocomplete e lookup por código
+## O que está dentro
+
+- **CID-10** — 2.045 doenças (tradução DATASUS, redistribuível) com capítulo, categoria, autocomplete e lookup por código
 - **Sintomas** — 387 códigos CID-10 Capítulo XVIII (R00-R99)
 - **Regiões IBGE** — 27 estados + 5.571 municípios com hierarquia (estado → cidades)
 - **Notificação Compulsória** — 57 agravos (30 imediatas, 27 semanais) com mapeamento CID-10 ↔ SINAN
 - **Fluxo de Notificação** — passos oficiais (imediata/semanal) com base legal e prazos
 - **Estatísticas** — distribuição por capítulo CID-10, municípios por estado
 
+## Começar em 30 segundos
+
+```bash
+git clone https://github.com/DevJanderson/RefSUS.git
+cd RefSUS
+pnpm install
+pnpm dev:api
+```
+
+- API em http://localhost:8003
+- Documentação interativa em http://localhost:8003/docs
+
 ## Estrutura
 
 ```
 RefSUS/
 ├── packages/
-│   ├── api/          ← Hono.js — API REST + OpenAPI 3.1 + Scalar docs
-│   └── web/          ← Astro.js — frontend (planejado)
-├── wiki/             ← documentação do projeto
-└── pnpm-workspace.yaml
+│   ├── api/          # Hono.js — API REST + OpenAPI 3.1 + Scalar docs
+│   └── web/          # Astro.js — frontend (em construção)
+├── docs/             # documentação pública (pra quem consome a API)
+├── wiki/             # documentação interna (pra quem contribui)
+├── CLAUDE.md         # entry point pra agentes
+├── CONTRIBUTING.md
+└── CHANGELOG.md
 ```
 
 ## Stack
@@ -31,20 +48,13 @@ RefSUS/
 | Framework | Hono.js (TypeScript) |
 | ORM | Drizzle ORM |
 | Banco (dev) | SQLite + better-sqlite3 |
+| Banco (prod) | Cloudflare D1 |
 | Validação | Zod v4 + @hono/zod-openapi |
-| Docs | Scalar (OpenAPI 3.1 auto-gerada) |
-| Testes | Vitest (22 testes) |
+| Docs interativa | Scalar (OpenAPI 3.1 auto-gerada) |
+| Testes | Vitest |
 | Lint | Biome |
 | Monorepo | pnpm workspaces |
-
-## Começar
-
-```bash
-pnpm install
-pnpm dev
-# → http://localhost:8003
-# → http://localhost:8003/docs
-```
+| Frontend | Astro.js |
 
 ## Endpoints principais
 
@@ -59,21 +69,41 @@ pnpm dev
 | `GET /v1/stats` | Overview dos dados |
 | `GET /docs` | Documentação interativa (Scalar) |
 
-Documentação completa em `/docs` (gerada automaticamente dos schemas).
+Lista completa: [`docs/referencia/endpoints.md`](docs/referencia/endpoints.md).
 
-## Wiki
+## Documentação
 
-- [Visão Geral](wiki/visao-geral.md)
-- [Notificação Compulsória](wiki/notificacao-compulsoria.md)
-- [Dados e Fontes](wiki/dados-e-fontes.md)
-- [Guia de Uso](wiki/guia-de-uso.md)
-- [Integração Epidemiológica](wiki/integracao-dados-vivos.md)
-- [Volume e Validação](wiki/volume-e-validacao.md)
-- [Plano de Deploy](wiki/plano-deploy-cloudflare.md)
+### Pra **consumir** a API → [`docs/`](docs/README.md)
 
-## Deploy planejado
+- [Início](docs/inicio/) — instalação, primeiros passos, conceitos
+- [Guias](docs/guias/) — JavaScript, Python, verificar notificação, autocomplete
+- [Referência](docs/referencia/) — endpoints, rate limiting, cache, erros
+- Documentação interativa em [`/docs`](http://localhost:8003/docs) (Scalar)
 
-Cloudflare Workers (API) + D1 (banco) + Pages (frontend Astro.js). Custo: ~R$ 50/ano (domínio).
+### Pra **contribuir** → [`wiki/`](wiki/README.md)
+
+- [Invariantes](wiki/INVARIANTES.md) — regras duras
+- [Domínio](wiki/dominio/) — SUS, CID-10, base legal, glossário
+- [Arquitetura](wiki/arquitetura/) — estrutura, monorepo, deploy
+- [ADRs](wiki/adr/) — decisões arquiteturais
+- [Dados](wiki/dados/) — data dictionary e fontes
+- [Guias de dev](wiki/guias-dev/) — como adicionar endpoint, dataset, rodar testes
+- [Runbooks](wiki/runbooks/) — rollback, reingestão, secrets
+- [Roadmap](wiki/roadmap/) — 🔮 o que vem por aí
+
+Agentes (Claude Code, Cursor, etc.): ler [`CLAUDE.md`](CLAUDE.md) primeiro.
+
+## Contribuir
+
+Ver [`CONTRIBUTING.md`](CONTRIBUTING.md). Antes de abrir PR, rode:
+
+```bash
+pnpm test && pnpm lint
+```
+
+## Deploy
+
+Cloudflare Workers (API) + D1 (banco) + Pages (frontend). Custo: ~R$ 50/ano (domínio). Plano em [`wiki/arquitetura/deploy-cloudflare.md`](wiki/arquitetura/deploy-cloudflare.md).
 
 ## Licença
 
