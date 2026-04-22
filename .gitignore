@@ -32,3 +32,6 @@ packages/api/scripts/seed.sql
 
 # Playwright
 .playwright-cli
+
+# Obsidian
+wiki/.obsidian/
