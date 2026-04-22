@@ -1,28 +1,25 @@
-# RefSUS — Wiki
+# RefSUS — Wiki interna
 
-API pública de dados de referência para o SUS e saúde coletiva no Brasil.
+Documentação pra **contribuidores e agentes**. Se você vai **consumir** a API, veja [`docs/`](../docs/README.md).
 
-## O que é o RefSUS
+**Antes de mexer em qualquer coisa:** [`../CLAUDE.md`](../CLAUDE.md) e [`INVARIANTES.md`](INVARIANTES.md).
 
-Base de consulta unificada de dados de referência que todo profissional de vigilância epidemiológica, atenção primária e gestão em saúde usa diariamente. CID-10, IBGE, notificação compulsória e fluxos oficiais — num único lugar, com documentação interativa.
+## Categorias
 
-## Índice
+| Pasta | O que contém | Ciclo de vida |
+|-------|--------------|---------------|
+| [`dominio/`](dominio/) | Conhecimento SUS (CID-10, SINAN, base legal) | Imutável |
+| [`arquitetura/`](arquitetura/) | Decisões estruturais e diagramas | Lento |
+| [`adr/`](adr/) | Architecture Decision Records | Append-only |
+| [`dados/`](dados/) | Data dictionary, fontes, schema do banco | Médio |
+| [`guias-dev/`](guias-dev/) | How-to pro contribuidor | Médio |
+| [`runbooks/`](runbooks/) | Operação quando algo quebra | Append |
+| [`roadmap/`](roadmap/) | 🔮 Futuro — não implementar sem discussão | Alto |
 
-### Sobre o projeto
-- [Visão Geral](visao-geral.md) — por que existe, pra quem, diferenciais
+## Leitura inicial sugerida
 
-### Domínio de saúde
-- [Notificação Compulsória](notificacao-compulsoria.md) — base legal, 57 agravos, fluxos, casos de uso
-- [Dados e Fontes Oficiais](dados-e-fontes.md) — CSVs, fontes (OMS, DATASUS, IBGE, MS), rastreabilidade
-
-### Integração e uso
-- [Guia de Uso](guia-de-uso.md) — curl, JavaScript, Python, rate limiting, cache
-
-### Evolução
-- [Integração com Dados Epidemiológicos](integracao-dados-vivos.md) — InfoGripe, DATASUS, ETL pipeline
-- [Volume de Dados e Validação](volume-e-validacao.md) — quanto custa, 5 camadas de validação, free tier
-- [Plano de Deploy](plano-deploy-cloudflare.md) — Cloudflare Workers + D1 + Pages (Astro.js)
-
-### Referência técnica
-- Endpoints e schemas → `http://localhost:8003/docs` (Scalar, gerado automaticamente)
-- Stack e arquitetura → `README.md` na raiz do repositório
+1. [`../CLAUDE.md`](../CLAUDE.md) — entry point
+2. [`INVARIANTES.md`](INVARIANTES.md) — regras duras
+3. [`arquitetura/visao-geral.md`](arquitetura/visao-geral.md) — o que é o projeto
+4. [`dominio/notificacao-compulsoria.md`](dominio/notificacao-compulsoria.md) — se for mexer em agravos
+5. [`guias-dev/`](guias-dev/) — pra começar a contribuir

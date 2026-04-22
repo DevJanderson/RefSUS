@@ -1,4 +1,7 @@
-# RefSUS — Volume de Dados e Validação
+# 🔮 Volume de Dados e Validação
+
+> **Status:** 🔮 FUTURO — premissas de volume e validação pros dados epidemiológicos que ainda serão integrados.
+> **Stack hoje** é dados de referência estáticos (~1.5 MB em SQLite local). Custos, free tiers e camadas de validação descritos aqui valem **quando houver ETL**.
 
 ## Quanto de dados precisamos
 

@@ -52,4 +52,4 @@ O RefSUS preenche esse gap.
 - Cobertura vacinal
 - Frontend visual (planejado com Astro.js)
 
-Detalhes em [Integração com Dados Epidemiológicos](integracao-dados-vivos.md).
+Detalhes em [Integração com Dados Epidemiológicos](../roadmap/integracao-dados-vivos.md) (🔮 futuro).

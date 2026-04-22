@@ -1,4 +1,7 @@
-# RefSUS — Integração com Dados Epidemiológicos Reais
+# 🔮 Integração com Dados Epidemiológicos Reais
+
+> **Status:** 🔮 FUTURO — descreve uma direção, não contrato atual.
+> **Não implementar sem confirmação** do mantainer. Stack atual é apenas dados de referência (CID-10, IBGE, notificação). ETL Python, InfoGripe, SINAN, SIM, DuckDB aqui descritos **não existem no código hoje**.
 
 ## O problema
 
