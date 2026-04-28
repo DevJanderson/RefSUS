@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SearchDoencas from "../components/SearchDoencas.vue";
+
+const API_URL = import.meta.env.PUBLIC_API_URL || "http://localhost:8003";
+---
+
+<Layout title="Buscar doencas (CID-10)">
+  <main class="container mx-auto px-4 py-12">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div>
+        <nav class="text-sm text-muted-foreground mb-2">
+          <a href="/" class="hover:text-foreground">Inicio</a>
+          <span class="mx-2">/</span>
+          <span>Doencas</span>
+        </nav>
+        <h1 class="text-3xl font-bold tracking-tight">Doencas (CID-10)</h1>
+        <p class="mt-2 text-muted-foreground">
+          Busca no catalogo de 2.045 doencas da Classificacao Internacional de
+          Doencas (tradutacao DATASUS). Use nome ou codigo CID-10.
+        </p>
+      </div>
+
+      <SearchDoencas client:load apiUrl={API_URL} />
+
+      <section class="mt-12 rounded-lg border bg-card p-6 space-y-3">
+        <h2 class="font-semibold">Consumir via API</h2>
+        <p class="text-sm text-muted-foreground">
+          O mesmo autocomplete desta pagina esta disponivel via HTTP:
+        </p>
+        <pre class="overflow-x-auto rounded bg-muted p-3 text-xs"><code>curl "{API_URL}/v1/doencas/autocomplete?q=dengue&limit=10"</code></pre>
+        <p class="text-sm">
+          <a href="/docs" class="text-primary hover:underline">
+            Ver documentacao interativa -&gt;
+          </a>
+        </p>
+      </section>
+    </div>
+  </main>
+</Layout>

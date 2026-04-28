@@ -1,0 +1,26 @@
+---
+const API_URL = import.meta.env.PUBLIC_API_URL || "http://localhost:8003";
+const DOCS_URL = `${API_URL}/docs`;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecionando para a documentacao da API | RefSUS</title>
+    <meta http-equiv="refresh" content={`0; url=${DOCS_URL}`} />
+    <link rel="canonical" href={DOCS_URL} />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body style="font-family: system-ui, sans-serif; padding: 2rem; max-width: 40rem; margin: 0 auto;">
+    <p>Redirecionando para a documentacao interativa da API...</p>
+    <p>
+      Se nao redirecionar automaticamente,
+      <a href={DOCS_URL}>clique aqui</a>.
+    </p>
+    <script is:inline define:vars={{ DOCS_URL }}>
+      window.location.replace(DOCS_URL);
+    </script>
+  </body>
+</html>
